@@ -20,27 +20,30 @@ function symmetricDifference(availableSeats, seatsReq) {
         _difference.add(elem)
       }
     }
-    return ticketData[1].Asientos.Disponibles = [...new Set(_difference)];
+    return ticketData[1].Seats.Availability = [...new Set(_difference)];
 };
 
 module.exports = {
-    getFilmData: (req, res) => {
-        res.send(ticketData[0].Pelicula);
+    getFilmsData: (req, res) => {
+        res.send(ticketData[0].Films);
     },
     getSeatsData: (req, res) => {
-        res.send(ticketData[1].Asientos);
+        res.send(ticketData[1].Seats);
     },
     bookSeats: (req, res) => {
         const seatsReq = req.body.seats;
-        const availableSeats = ticketData[1].Asientos.Disponibles;
+        const availableSeats = ticketData[1].Seats.Availability;
         const seatFound = seatsReq.map((seatReq) => {
             return availableSeats.find(avSeat => avSeat === seatReq)
         });
         if(seatFound.includes(undefined)){
             return res.status(404).send('Sorry one or more seats you are trying to book are now unavailable...')
         } else {
-            symmetricDifference(availableSeats, seatsReq);
-            saveSeatChanges();
+
+            // Change function... instead of deleting occupied seats, toggle to "available": false
+            
+            // symmetricDifference(availableSeats, seatsReq);
+            // saveSeatChanges();
             res.status(200).send(`Your seats n. ${seatsReq} have been successfully booked! Don't forget to buy popcorn and enjoy the movie!`)
         };
     },
