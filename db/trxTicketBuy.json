@@ -1,17 +1,76 @@
 [
     {
-        "Pelicula": {
-            "Nombre": "Avengers: Endgame",
-            "Precio:": 10
-        }
+        "Films": [
+            {
+                "Name": "Avengers: Endgame",
+                "Price": 10
+            }
+        ]
     },
     {
-        "Asientos": {
-            "Totales": 48,
-            "Disponibles": [
-                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-                19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
-                35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48
+        "Seats": {
+            "Total": 48,
+            "Availability": [
+                { "SeatNumber": 1, "Available": true },
+                { "SeatNumber": 2, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 3, "Available": true },
+                { "SeatNumber": 4, "Available": true },
+                { "SeatNumber": 5, "Available": true },
+                { "SeatNumber": 6, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 7, "Available": true },
+                { "SeatNumber": 8, "Available": false },
+                { "SeatNumber": 9, "Available": true },
+                { "SeatNumber": 10, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 11, "Available": true },
+                { "SeatNumber": 12, "Available": true },
+                { "SeatNumber": 13, "Available": true },
+                { "SeatNumber": 14, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 15, "Available": true },
+                { "SeatNumber": 16, "Available": true },
+                { "SeatNumber": 17, "Available": true },
+                { "SeatNumber": 18, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 19, "Available": true },
+                { "SeatNumber": 20, "Available": true },
+                { "SeatNumber": 21, "Available": true },
+                { "SeatNumber": 22, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 23, "Available": true },
+                { "SeatNumber": 24, "Available": true },
+                { "SeatNumber": 25, "Available": true },
+                { "SeatNumber": 26, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 27, "Available": true },
+                { "SeatNumber": 28, "Available": true },
+                { "SeatNumber": 29, "Available": true },
+                { "SeatNumber": 30, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 31, "Available": true },
+                { "SeatNumber": 32, "Available": true },
+                { "SeatNumber": 33, "Available": true },
+                { "SeatNumber": 34, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 35, "Available": true },
+                { "SeatNumber": 36, "Available": true },
+                { "SeatNumber": 37, "Available": true },
+                { "SeatNumber": 38, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 39, "Available": true },
+                { "SeatNumber": 40, "Available": true },
+                { "SeatNumber": 41, "Available": true },
+                { "SeatNumber": 42, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 43, "Available": true },
+                { "SeatNumber": 44, "Available": true },
+                { "SeatNumber": 45, "Available": true },
+                { "SeatNumber": 46, "Available": true },
+                { "SeatNumber": "corridor", "Available": false},
+                { "SeatNumber": 47, "Available": true },
+                { "SeatNumber": 48, "Available": true }
             ]
         }
     }
