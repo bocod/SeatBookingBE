@@ -4,5 +4,6 @@ const mainController = require('../controller/mainController');
 
 router.get('/film-data', mainController.getFilmData);
 router.get('/seats-data', mainController.getSeatsData);
+router.post('/book-seat', mainController.bookSeats);
 
 module.exports = router;
