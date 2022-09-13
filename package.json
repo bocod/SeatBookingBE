@@ -4,7 +4,8 @@
   "description": "Backend for cineticket",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "nodemon -e js node app.js"
   },
   "author": "bocod",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1"
   }
 }
