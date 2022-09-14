@@ -11,39 +11,35 @@ function saveSeatChanges(){
     fs.writeFileSync(buyTicketPath, ticketDataStringified, 'utf-8'); 
 };
 
-function symmetricDifference(availableSeats, seatsReq) {
-    let _difference = new Set(availableSeats)
-    for (let elem of seatsReq) {
-      if (_difference.has(elem)) {
-        _difference.delete(elem)
-      } else {
-        _difference.add(elem)
-      }
-    }
-    return ticketData[1].Seats.Availability = [...new Set(_difference)];
-};
-
 module.exports = {
     getFilmsData: (req, res) => {
         res.send(ticketData[0].Films);
     },
+
     getSeatsData: (req, res) => {
         res.send(ticketData[1].Seats);
     },
+
     bookSeats: (req, res) => {
         const seatsReq = req.body.seats;
         const availableSeats = ticketData[1].Seats.Availability;
         const seatFound = seatsReq.map((seatReq) => {
-            return availableSeats.find(avSeat => avSeat === seatReq)
+            return availableSeats.find(avSeat => avSeat.SeatNumber === seatReq)
         });
+
+        // Don't book at first mapping in order to avoid partials booking. 
+        // Whether the user book all seats wanted or neither of them.
+
         if(seatFound.includes(undefined)){
             return res.status(404).send('Sorry one or more seats you are trying to book are now unavailable...')
         } else {
-
-            // Change function... instead of deleting occupied seats, toggle to "available": false
-            
-            // symmetricDifference(availableSeats, seatsReq);
-            // saveSeatChanges();
+            const seatFound = seatsReq.map((seatReq) => {
+                return availableSeats.find(avSeat => {
+                    if(avSeat.SeatNumber === seatReq){
+                        avSeat.Available = false;
+                    }})
+            });
+            saveSeatChanges();
             res.status(200).send(`Your seats n. ${seatsReq} have been successfully booked! Don't forget to buy popcorn and enjoy the movie!`)
         };
     },
