@@ -4,6 +4,22 @@
             {
                 "Name": "Avengers: Endgame",
                 "Price": 10
+            },
+            {
+                "Name": "Encanto",
+                "Price": 7
+            },
+            {
+                "Name": "You, Me and Dupree",
+                "Price": 4.50
+            },
+            {
+                "Name": "Lazzaro Felice",
+                "Price": 5.75
+            },
+            {
+                "Name": "Star Wars: Episode IV - A new hope",
+                "Price": 6.15
             }
         ]
     },
