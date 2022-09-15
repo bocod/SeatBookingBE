@@ -12,6 +12,10 @@ function saveSeatChanges(){
 };
 
 module.exports = {
+    getAllData: (req, res) => {
+        res.send(ticketData);
+    },
+
     getFilmsData: (req, res) => {
         res.send(ticketData[0].Films);
     },
