@@ -1,5 +1,7 @@
 # SeatBooking
 
+[See the app in action!](https://seatbooking-49893.web.app)
+
 This backend repository works together with it's frontend.
 
 [By clicking here you can take a look to the frontend...](https://github.com/bocod/SeatBooking)
